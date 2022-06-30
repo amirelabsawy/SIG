@@ -111,7 +111,7 @@ public class FileOperations {
                 PrintWriter fileWriter = new PrintWriter(bufferedWriter);
 
                 for (int i = 0; i < frame.getHeaderTable().getRowCount(); ++i) {
-                    for (int j = 0; j < frame.getHeaderTable().getColumnCount(); ++j) {
+                    for (int j = 0; j < frame.getHeaderTable().getColumnCount()-1; ++j) {
                         String s = frame.getHeaderTable().getValueAt(i, j).toString();
                         System.out.println(s);
                         fileWriter.print(s);

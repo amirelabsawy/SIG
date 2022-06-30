@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 
 public class InvHeaderModel extends DefaultTableModel {
 
-    String[] cols = {"No.", "Invoice Date", "Customer Name", "Total"};
+    String[] cols = {"No.", "Customer Name", "Invoice Date", "Total"};
     ArrayList<InvoiceHeader> data;
         private DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 

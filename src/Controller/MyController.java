@@ -106,7 +106,6 @@ public class MyController implements ActionListener, ListSelectionListener {
 
             InvoiceHeader row = frame.getHeaderTableModel().getData().get(selectedRowIndex);
             frame.getCustNameTF().setText(row.getCusName());
-            //frame.getInvDateTF().setText(row.getInvDate().toString());
             frame.getInvDateTF().setText(df.format(row.getInvDate()));
             frame.getInvNumLbl().setText("" + row.getInvNum());
             frame.getInvTotalLbl().setText("" + row.getInvTotal());
