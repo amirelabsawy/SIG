@@ -46,7 +46,10 @@ public class InvoiceHeader {
   
     @Override
     public String toString() {
-        String str = "InvoiceHeader{" + "invNum=" + invNum + ", customerName=" + cusName + ", invDate=" + invDate + '}';
+       // String str = "InvoiceHeader{" + "invNum=" + invNum + ", customerName=" + cusName + ", invDate=" + invDate + '}';
+        
+        String str = "InvoiceHeader{" + "invNum=" + invNum + ", invDate=" + invDate + ", customerName=" + cusName + '}';
+        
         for (InvoiceLine line : getLines()) {
             str += "\n\t" + line;
         }

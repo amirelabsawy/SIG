@@ -42,8 +42,8 @@ public class FileOperations {
             while ((headerLine = headerBr.readLine()) != null) {
                 String[] headerSegments = headerLine.split(",");
                 String invNumStr = headerSegments[0];
-                String invDateStr = headerSegments[1]; // "22-11-2020"
-                String custName = headerSegments[2];
+                String invDateStr = headerSegments[2]; // "22-11-2020"
+                String custName = headerSegments[1];
                
                 int invNum = Integer.parseInt(invNumStr);
                 Date invDate = df.parse(invDateStr);
@@ -107,7 +107,7 @@ public class FileOperations {
         File file = chooser.getSelectedFile();
         if (file != null && state == JFileChooser.APPROVE_OPTION) {
             try {
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, false));
                 PrintWriter fileWriter = new PrintWriter(bufferedWriter);
 
                 for (int i = 0; i < frame.getHeaderTable().getRowCount(); ++i) {
@@ -130,7 +130,7 @@ public class FileOperations {
         file = chooser.getSelectedFile();
         if (file != null && state == JFileChooser.APPROVE_OPTION) {
             try {
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, false));
                 PrintWriter fileWriter = new PrintWriter(bufferedWriter);
 
                 for (int i = 0; i < frame.getLineTable().getRowCount(); ++i) {

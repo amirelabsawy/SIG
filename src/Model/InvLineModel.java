@@ -49,6 +49,7 @@ public class InvLineModel extends DefaultTableModel {
         InvoiceLine row = invoiceLines.get(rowIndex);
         
         switch (columnIndex) {
+         
           case 0: return row.getItemName();
           case 1: return row.getItemPrice();
           case 2: return row.getItemCount();
